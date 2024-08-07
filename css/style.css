@@ -1,0 +1,525 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--color-black-olive);
+    padding: 1.5em 0;
+}
+
+header .column-left a {
+    color: var(--color-raspberry);
+    font-family: var(--font-hagrid);
+    font-size: 1.8em;
+    padding-top: .4em;
+}
+
+nav .column-right {
+    gap: 1.5em;
+    font-size: 1.15em;
+}
+
+nav a {
+    color: var(--color-green-grape);
+    text-align: center;
+}
+
+nav .ancor {
+    transition: all 0.1s ease;
+}
+
+@media (hover: hover) {
+    nav .ancor:hover {
+        color: var(--color-banana);
+        transform: scale(1.1);
+    }
+}
+
+nav .social-icon {
+    background-color: var(--color-green-grape);
+    padding: .2em;
+    color: var(--color-black-olive);
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    font-size: 1.1em;
+    transition: all 0.1s ease;
+}
+
+@media (hover: hover) {
+    nav .social-icon:hover {
+        background-color: var(--color-banana);
+        transform: scale(1.2);
+    }
+}
+
+
+
+#home {
+    background-color: var(--color-peach);
+}
+
+#home h1 {
+    font-size: 5em;
+    padding-left: 2.5em;
+    line-height: 1.3em;
+}
+
+#home p {
+    font-size: 1.5em;
+}
+
+#home video {
+    position: absolute;
+    opacity: .15;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#home a.button {
+    right: 8%;
+    bottom: 8%;
+}
+
+#portfolio-hiperlink {
+    background-color: var(--color-plum);
+    padding: 3em;
+    gap: 2em;
+}
+
+#portfolio-hiperlink img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#portfolio-hiperlink h3 {
+    color: var(--color-papaya);
+    font-size: 1.8em;
+}
+
+#portfolio-hiperlink p {
+    color: var(--color-banana);
+    border-top: .15em solid;
+    margin-top: 1em;
+    padding-top: .5em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+#portfolio-hiperlink .project {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#portfolio-hiperlink .project .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    background-color: rgba(var(--colorrgb-black-olive), .7);
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+@media (hover: hover) {
+
+    #portfolio-hiperlink .project:hover .details,
+    #portfolio-hiperlink .project:focus-within .details {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#portfolio-highlight {
+    background-color: var(--color-pineapple);
+    padding-top: 8em;
+    padding-bottom: 8em;
+    gap: 3em;
+    height: 100vh;
+}
+
+#portfolio-highlight .project-line {
+    gap: 4em;
+}
+
+#portfolio-highlight #second-project-highlight {
+    border-radius: 10em;
+}
+
+#portfolio-highlight #seventh-project-highlight {
+    border-radius: 2em;
+}
+
+#portfolio-highlight #third-project-highlight,
+#portfolio-highlight #fourth-project-highlight,
+#portfolio-highlight #fifth-project-highlight,
+#portfolio-highlight #sixth-project-highlight,
+#portfolio-highlight #seventh-project-highlight {
+    aspect-ratio: 1;
+}
+
+#portfolio-highlight .project {
+    height: 40%;
+    width: 25%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+@media (hover: hover) {
+
+    #portfolio-highlight .project:hover,
+    #portfolio-highlight .project:focus-within {
+        transform: scale(1.5);
+        z-index: 10;
+        box-shadow: 0 0 5em;
+    }
+}
+
+#portfolio-highlight #first-project-highlight,
+#portfolio-highlight #eighth-project-highlight {
+    width: 18%;
+    flex-grow: 1;
+}
+
+#portfolio-highlight #third-project-highlight,
+#portfolio-highlight #fourth-project-highlight,
+#portfolio-highlight #sixth-project-highlight,
+#portfolio-highlight #seventh-project-highlight {
+    width: auto;
+}
+
+#portfolio-highlight #fifth-project-highlight {
+    width: auto;
+}
+
+#portfolio-highlight img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+}
+
+#aboutme {
+    background-color: var(--color-papaya);
+    padding: 5em;
+}
+
+#aboutme h1 {
+    font-size: 4em;
+    margin-bottom: 1em;
+    color: var(--color-black-olive);
+    line-height: 1.3em;
+}
+
+#aboutme p {
+    font-size: 1.4em;
+    line-height: 1.3em;
+}
+
+#aboutme .img-container {
+    height: 100%;
+    width: 70%;
+}
+
+#aboutme .profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50em;
+}
+
+#aboutme i {
+    position: absolute;
+    left: -13%;
+    bottom: 25%;
+    height: 10em;
+}
+
+#aboutme i img {
+    height: inherit;
+}
+
+#contactme {
+    background-color: var(--color-peach);
+    padding: 6em 5em;
+    gap: 1.5em;
+}
+
+#contactme h1 {
+    flex: .6;
+    font-size: 4em;
+    line-height: 1.3em;
+    color: var(--color-blackberry);
+}
+
+#contactme form {
+    gap: 1.5em;
+}
+
+#contactme h2 {
+    color: var(--color-plum);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    font-family: var(--font-body-text);
+}
+
+#contactme input,
+#contactme textarea {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 1em;
+    background-color: var(--color-pineapple);
+    color: var(--color-raspberry);
+    transition: all .1s ease;
+}
+
+#contactme input::placeholder,
+#contactme textarea::placeholder {
+    color: var(--color-raspberry);
+    opacity: .6;
+    text-transform: uppercase;
+}
+
+#contactme input:focus,
+#contactme textarea:focus {
+    outline: .2em solid var(--color-raspberry);
+    background-color: var(--color-pineapple);
+    font-weight: 400;
+}
+
+#contactme textarea {
+    resize: none;
+    line-height: 1.3em;
+}
+
+#contactme input.valid:not(:focus),
+#contactme textarea.valid:not(:focus) {
+    background-color: var(--color-green-grape);
+    font-weight: 400;
+}
+
+#contactme .error-message {
+    font-weight: 500;
+    color: var(--color-raspberry);
+    padding-top: .5em;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .1s ease;
+}
+
+#contactme input.invalid,
+#contactme textarea.invalid {
+    background-color: var(--color-raspberry);
+    color: var(--color-banana);
+    font-weight: 400;
+}
+
+#contactme input.invalid+.error-message,
+#contactme textarea.invalid+.error-message {
+    font-size: 1em;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (hover: hover) {
+
+    #contactme input:hover:not(:focus),
+    #contactme input.valid:hover:not(:focus),
+    #contactme textarea:hover:not(:focus),
+    #contactme textarea.valid:hover:not(:focus) {
+        background-color: var(--color-banana);
+        font-weight: bolder;
+        color: var(--color-raspberry);
+    }
+}
+
+footer {
+    padding: 3em;
+    color: var(--color-raspberry);
+    background-color: var(--color-black-olive);
+}
+
+footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+footer .right-column {
+    gap: 2em;
+}
+
+footer a {
+    background-color: var(--color-raspberry);
+    padding: .2em;
+    color: var(--color-black-olive);
+    border-radius: 100%;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    font-size: 1.5em;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+@media (hover: hover) {
+    footer a:hover {
+        background-color: var(--color-green-grape);
+        transform: scale(1.2);
+    }
+}
+
+#back-top {
+    width: 4em;
+    height: 4em;
+    right: 5%;
+    bottom: -4%;
+    background-color: var(--color-raspberry);
+    color: var(--color-pineapple);
+    transform: translateY(-110vh);
+    transition: all .5s ease;
+}
+
+#back-top i {
+    font-size: 2em;
+}
+
+#back-top.show {
+    transform: translateY(0);
+    opacity: .7;
+}
+
+@media (hover: hover) {
+
+    #back-top:hover,
+    #back-top:focus {
+        bottom: 1%;
+        opacity: 1;
+        box-shadow: 0 0 1em rgba(var(--colorrgb-black-olive), .7);
+    }
+}
+
+.popup-container {
+    top: 0;
+    left: 0;
+    background-color: rgba(var(--colorrgb-black-olive), .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+}
+
+.popup-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-container .popup {
+    width: 35em;
+    background-color: var(--color-papaya);
+    padding: 1.5em;
+}
+
+.popup-container.fail .popup {
+    background-color: var(--color-blackberry);
+}
+
+.popup-container .button.close {
+    width: 1em;
+    height: 1em;
+    padding: 1em;
+    background-color: transparent;
+    color: var(--color-pineapple);
+    font-size: 1.5em;
+}
+
+.popup-container p {
+    color: var(--color-pineapple);
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.popup-container.fail p:nth-child(1) {
+    display: none;
+}
+
+.popup-container.fail p:nth-child(2) {
+    display: block;
+}
+
+.popup-container.fail p:nth-child(2) a {
+    color: var(--color-banana);
+    text-decoration: underline;
+}
+
+.popup-container.fail .button.confirm span:nth-child(1) {
+    display: none;
+}
+
+.popup-container.fail .button.confirm span:nth-child(2) {
+    display: block;
+}
+
+.popup-container.fail .button.confirm {
+    background-color: var(--color-banana);
+}
+
+@media (hover: none) {
+    #portfolio-hiperlink .project .details {
+        opacity: 1;
+        visibility: visible;
+        background: linear-gradient(to top, var(--color-black-olive) 10%, transparent 60%);
+    }
+
+    #back-top {
+        bottom: 1%;
+        right: calc(50% - 2em);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: spin 2s linear infinite;
+}
+
+form .spinner {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0;
+}
+
+form.loading .spinner {
+    visibility: visible;
+    opacity: 1;
+    font-size: 1em;
+}

@@ -1,0 +1,127 @@
+@media only screen and (max-width: 1036px) and (orientation: portrait) {
+    nav .column-left {
+        flex: .8;
+    }
+
+    nav .column-left a {
+        font-size: 2em;
+    }
+
+    nav .column-right {
+        flex: 2;
+        font-size: 1.4em;
+    }
+
+    nav .social-icon {
+        font-size: 1.4em;
+    }
+
+    .button {
+        font-size: 1.7em;
+    }
+
+    #portfolio-hiperlink {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 4em;
+    }
+
+    #portfolio-highlight {
+        padding: 4em 0;
+        gap: 2em;
+    }
+
+    #portfolio-highlight .project {
+        height: calc(100% / 4 - 1.5em);
+    }
+
+    #portfolio-highlight #first-project-highlight {
+        width: calc(50% - 1em);
+        flex-grow: 0;
+    }
+
+    #portfolio-highlight #second-project-highlight {
+        width: calc(50% - 1em);
+        border-radius: 10em 0 0 10em;
+    }
+
+    #portfolio-highlight #third-project-highlight {
+        border-radius: 0 100% 100% 0;
+    }
+
+    #portfolio-highlight #fourth-project-highlight {
+        flex-grow: 1;
+    }
+
+    #portfolio-highlight #fifth-project-highlight {
+        flex-grow: 1;
+    }
+
+    #portfolio-highlight #sixth-project-highlight {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #portfolio-highlight #seventh-project-highlight {
+        flex: 1;
+        border-radius: 0 10em 10em 0;
+    }
+
+    #portfolio-highlight #eighth-project-highlight {
+        aspect-ratio: 1;
+        width: auto;
+        flex-grow: 0;
+        border-radius: 100%;
+    }
+
+    #aboutme {
+        padding: 4em;
+        gap: 4em;
+    }
+
+    #aboutme .column-right {
+        flex: 1;
+    }
+
+    #aboutme .column-right .img-container {
+        width: 100%;
+    }
+
+    #aboutme p {
+        font-size: 1.5em;
+    }
+
+    .popup-container p {
+        font-size: 2em;
+    }
+
+    .popup-container .button.close {
+        font-size: 2.5em;
+    }
+
+    #contactme {
+        flex-direction: column;
+    }
+
+    #contactme h1 {
+        display: flex;
+        align-items: center;
+    }
+
+    #contactme input,
+    #contactme textarea {
+        font-size: 1.5em;
+    }
+
+    footer h3 {
+        font-size: 1.8em;
+    }
+
+    footer p {
+        font-size: 1.2em;
+    }
+
+    footer a {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,3 @@
+startupSetupBackTopButton()
+startupSetupConfiguration()
+startupAddFormInputListeners()

@@ -1,0 +1,166 @@
+@media only screen and (max-width: 435px) and (orientation: portrait) {
+    #home {
+        align-items: center;
+    }
+
+    #home h1 {
+        font-size: 2.5em;
+        padding-left: 0;
+    }
+
+    #home a.button {
+        right: inherit;
+    }
+
+    nav {
+        padding: 0 2em;
+        justify-content: space-between;
+    }
+
+    nav .ancor[href="#menu"] {
+        display: block;
+        flex: 0;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+    }
+
+    nav .column-left {
+        justify-content: start;
+    }
+
+    nav .column-right {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--color-black-olive);
+        top: 0;
+        left: 0;
+        padding: 2em;
+        box-sizing: border-box;
+        gap: 2em;
+        font-size: 1.6em;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        transform: translateX(100vw);
+        transition: all .2s ease;
+    }
+
+    nav #menu:target,
+    nav #menu:focus-within {
+        transform: translateX(0);
+    }
+
+    nav .ancor {
+        width: 100%;
+    }
+
+    nav .ancor[href="#home"] {
+        display: block;
+        font-size: 1.6em;
+    }
+
+    nav .social-icon {
+        width: 1.3em;
+        height: 1.3em;
+        line-height: 1.3em;
+        font-size: 1.4em;
+    }
+
+    #portfolio-hiperlink {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    #portfolio-hiperlink .project {
+        height: 20em;
+    }
+
+    #contactme {
+        flex-direction: column;
+        height: auto;
+        gap: 2.5em;
+        padding: 2em;
+    }
+
+    #contactme h1 {
+        font-size: 3em;
+        align-self: start;
+    }
+
+    #contactme h2 {
+        margin-bottom: 0;
+    }
+
+    #contactme input,
+    #contactme textarea {
+        font-size: 1em;
+    }
+
+    #contactme .button {
+        width: 100%;
+    }
+
+    #back-top {
+        transform: translateY(-150vh);
+    }
+
+    .popup-container .popup {
+        width: 80%;
+    }
+
+    #aboutme {
+        padding: 2em;
+        padding-right: 0;
+        gap: 2em;
+    }
+
+    #aboutme h1 {
+        font-size: 3em;
+    }
+
+    #aboutme p {
+        font-size: 1.3em;
+    }
+
+    #aboutme .column-right {
+        flex: .5;
+    }
+
+    #aboutme .img-container {
+        width: 100%;
+    }
+
+    #aboutme .profile-photo {
+        border-radius: 5em 0 0 5em;
+        object-position: 45% 50%;
+    }
+
+    #aboutme i img {
+        display: none;
+    }
+
+    #portfolio-highlight {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 2em;
+        padding-bottom: 6em;
+    }
+
+    footer .right-column {
+        justify-content: space-evenly;
+        gap: 0;
+    }
+
+    footer a {
+        width: 1.3em;
+        height: 1.3em;
+        line-height: 1.3em;
+        font-size: 2em;
+    }
+}
