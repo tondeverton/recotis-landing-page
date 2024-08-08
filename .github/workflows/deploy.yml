@@ -1,0 +1,62 @@
+# This file is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.
+# You may obtain a copy of the license at https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt
+
+name: Deploy to Google Cloud Storage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    container: node:20
+
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Auth Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.CREDENTIALS_JSON }}
+      
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Inject environment variables
+        run: |
+          echo "window.__env = {" >> ./js/environment_variables.js
+          echo "  bffHost: '${{ secrets.SIGNED_URLS_PROVIDER_HOST }}'," >> ./js/environment_variables.js
+          echo "}" >> ./js/environment_variables.js
+
+      - name: Inject security js
+        run: echo '${{ secrets.SECURITY_JS }}' > ./js/security.js
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm run unit:test
+
+      - name: Deploy to Google Cloud Storage
+        run: |
+          gsutil cp ./index.html gs://www.recotis.com
+          gsutil acl ch -u AllUsers:R gs://www.recotis.com/index.html
+          gsutil cp ./script.min.js gs://www.recotis.com
+          gsutil acl ch -u AllUsers:R gs://www.recotis.com/script.min.js
+          gsutil cp ./styles.min.css gs://www.recotis.com
+          gsutil acl ch -u AllUsers:R gs://www.recotis.com/styles.min.css
+          gsutil cp ./images/claps.png gs://www.recotis.com/images/
+          gsutil acl ch -u AllUsers:R gs://www.recotis.com/images/claps.png
+          gsutil cp ./images/coming_soon.svg gs://www.recotis.com/images/
+          gsutil acl ch -u AllUsers:R gs://www.recotis.com/images/coming_soon.svg

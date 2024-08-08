@@ -1,0 +1,20 @@
+/*
+This file is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.
+You may obtain a copy of the license at https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt
+*/
+
+#everton-signature {
+    padding: 1.5em;
+    text-align: center;
+    background-color: var(--color-plum);
+}
+
+#everton-signature h1 {
+    color: var(--color-raspberry);
+    font-family: var(--font-body-text);
+}
+
+#everton-signature a {
+    color: var(--color-papaya);
+    text-transform: uppercase;
+}
