@@ -55,3 +55,5 @@ jobs:
           gsutil acl ch -u AllUsers:R gs://www.recotis.com/styles.min.css
           gsutil cp ./images/claps.png gs://www.recotis.com/images/
           gsutil acl ch -u AllUsers:R gs://www.recotis.com/images/claps.png
+          gsutil cp ./images/coming_soon.svg gs://www.recotis.com/images/
+          gsutil acl ch -u AllUsers:R gs://www.recotis.com/images/coming_soon.svg
