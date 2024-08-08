@@ -1,3 +1,8 @@
+/*
+This file is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.
+You may obtain a copy of the license at https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt
+*/
+
 describe('Visit landing page and check external links', () => {
     const devices = [
         { name: 'Desktop', width: 1920, height: 1080 },
