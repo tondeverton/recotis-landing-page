@@ -2,6 +2,10 @@
 
 This project is the front end of [Renata Cotis's landing page](https://recotis.com).
 
+## License
+
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. See the [LICENSE](./LICENSE.txt) file for details.
+
 ## Run
 
 This is a static web project. You can run just oppening [index.html](index.html) in some browser.
