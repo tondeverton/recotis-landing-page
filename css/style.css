@@ -101,16 +101,21 @@ nav .social-icon {
 
 #portfolio-hiperlink h3 {
     color: var(--color-papaya);
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 #portfolio-hiperlink p {
     color: var(--color-banana);
     border-top: .15em solid;
-    margin-top: 1em;
+    margin-top: .5em;
     padding-top: .5em;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1em;
+}
+
+#portfolio-hiperlink h3,
+#portfolio-hiperlink p {
+    line-height: 1.2;
 }
 
 #portfolio-hiperlink .project {
