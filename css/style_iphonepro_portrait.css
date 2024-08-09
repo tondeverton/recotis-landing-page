@@ -4,6 +4,10 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 */
 
 @media only screen and (max-width: 435px) and (orientation: portrait) {
+    nav .column-left a {
+        text-align: start;
+    }
+
     #home {
         align-items: center;
     }
@@ -91,7 +95,7 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
     }
 
     #contactme h1 {
-        font-size: 3em;
+        font-size: 2.5em;
         align-self: start;
     }
 
@@ -120,14 +124,15 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         padding: 2em;
         padding-right: 0;
         gap: 2em;
+        height: auto;
     }
 
     #aboutme h1 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     #aboutme p {
-        font-size: 1.3em;
+        font-size: 1.25em;
     }
 
     #aboutme .column-right {
