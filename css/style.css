@@ -246,6 +246,10 @@ nav .social-icon {
     line-height: 1.5em;
 }
 
+#aboutme .column-right {
+    flex: .7;
+}
+
 #aboutme .img-container {
     height: 100%;
     width: 70%;
