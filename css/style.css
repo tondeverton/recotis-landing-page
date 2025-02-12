@@ -104,6 +104,10 @@ nav .social-icon {
     object-position: center;
 }
 
+#portfolio-hiperlink .project:nth-child(3) img {
+    object-position: left;
+}
+
 #portfolio-hiperlink h3 {
     color: var(--color-papaya);
     font-size: 1.5em;
