@@ -131,6 +131,9 @@ nav .social-icon {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+#portfolio-hiperlink a.project {
     cursor: pointer;
 }
 
