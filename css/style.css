@@ -8,15 +8,63 @@ html {
 }
 
 header {
-    background-color: var(--color-black-olive);
-    padding: 1.5em 0;
+    background-color: var(--color-pink);
+    padding: .5em 0;
 }
 
 header .column-left a {
-    color: var(--color-raspberry);
-    font-family: var(--font-hagrid);
-    font-size: 1.8em;
+    color: var(--background-color);
+    font-family: var(--content-font);
+    font-size: 1.3em;
     padding-top: .4em;
+    font-weight: 300;
+}
+
+header img {
+    height: 4em;
+    width: 4em;
+    border-radius: 100px;
+    background-color: rgba(var(--color-dark-pink-rgb), .2);
+}
+
+#desktop-pfp {
+    display: block;
+}
+
+#mobile-pfp-container,
+#desktop-pfp-container {
+    gap: .25em;
+}
+
+header h1 {
+    font-family: var(--content-font) !important;
+    font-size: 2em;
+    color: var(--background-color);
+}
+
+header h1 span:nth-of-type(2) {
+    font-weight: 800;
+    letter-spacing: -.01em;
+    margin-top: -.3em;
+}
+
+header h1 span:nth-of-type(3) {
+    text-transform: uppercase;
+    font-size: .4em;
+    letter-spacing: .5em;
+    font-weight: 200;
+}
+
+nav #menu {
+    height: 100%;
+    width: 100%;
+    gap: 15em;
+    padding: 0 5em;
+}
+
+nav .column-left {
+    white-space: nowrap;
+    gap: 2em;
 }
 
 nav .column-right {
@@ -25,7 +73,7 @@ nav .column-right {
 }
 
 nav a {
-    color: var(--color-green-grape);
+    color: var(--background-color);
     text-align: center;
 }
 
@@ -33,54 +81,66 @@ nav .ancor {
     transition: all 0.1s ease;
 }
 
+nav .ancor,
+nav .ancor-back {
+    fill: var(--background-color);
+}
+
 @media (hover: hover) {
     nav .ancor:hover {
-        color: var(--color-banana);
         transform: scale(1.1);
     }
 }
 
 nav .social-icon {
-    background-color: var(--color-green-grape);
+    background-color: transparent;
     padding: .2em;
-    color: var(--color-black-olive);
+    color: var(--background-color);
+    fill: var(--background-color);
     width: 1.2em;
     height: 1.2em;
     line-height: 1.2em;
-    font-size: 1.1em;
+    font-size: 1.3em;
     transition: all 0.1s ease;
+}
+
+nav svg {
+    height: 100%;
 }
 
 @media (hover: hover) {
     nav .social-icon:hover {
-        background-color: var(--color-banana);
         transform: scale(1.2);
     }
 }
 
 
-
 #home {
-    background-color: var(--color-peach);
+    background-color: var(--background-color);
+    padding: 0 8em;
+    overflow: hidden;
 }
 
 #home h1 {
-    font-size: 5em;
-    padding-left: 2.5em;
+    font-size: 7.5em;
     line-height: 1.3em;
+    text-align: center;
 }
 
 #home p {
     font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 400;
+    padding-top: 1em;
 }
 
 #home video {
-    position: absolute;
-    opacity: .15;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 65%;
+    border-radius: 15px;
     object-fit: cover;
-    object-position: center;
+    background-color: rgba(var(--color-dark-pink-rgb), .2);
 }
 
 #home a.button {
@@ -89,9 +149,14 @@ nav .social-icon {
 }
 
 #portfolio-hiperlink {
-    background-color: var(--color-pineapple);
+    background-color: var(--background-color);
     padding: 3em;
-    gap: 2em;
+    gap: .5em;
+}
+
+#portfolio-hiperlink picture,
+#portfolio-hiperlink img {
+    border-radius: inherit;
 }
 
 #portfolio-hiperlink img {
@@ -104,22 +169,40 @@ nav .social-icon {
     object-position: center;
 }
 
+#portfolio-hiperlink .project:nth-of-type(1) {
+    border-radius: 15px 0 0;
+}
+
+#portfolio-hiperlink .project:nth-of-type(2) {
+    border-radius: 0 15px 0 0;
+}
+
+#portfolio-hiperlink .project:nth-last-of-type(2) {
+    border-radius: 0 0 0 15px;
+}
+
+#portfolio-hiperlink .project:nth-last-of-type(1) {
+    border-radius: 0 0 15px;
+}
+
 #portfolio-hiperlink .project:nth-child(3) img {
     object-position: left;
 }
 
 #portfolio-hiperlink h3 {
-    color: var(--color-papaya);
-    font-size: 1.5em;
+    color: var(--color-pink);
+    font-size: 2.5em;
+    letter-spacing: .05em;
 }
 
 #portfolio-hiperlink p {
-    color: var(--color-banana);
+    color: var(--background-color);
     border-top: .15em solid;
     margin-top: .5em;
     padding-top: .5em;
     text-transform: uppercase;
     font-size: 1em;
+    width: 100%;
 }
 
 #portfolio-hiperlink h3,
@@ -130,11 +213,13 @@ nav .social-icon {
 #portfolio-hiperlink .project {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 25em;
+    cursor: pointer;
 }
 
-#portfolio-hiperlink a.project {
-    cursor: pointer;
+#portfolio-hiperlink .project,
+#aboutme .profile-photo {
+    background-color: rgba(var(--color-dark-pink-rgb), .2);
 }
 
 #portfolio-hiperlink .project .details {
@@ -153,6 +238,7 @@ nav .social-icon {
     background-color: rgba(var(--colorrgb-black-olive), .7);
     padding: 1em;
     box-sizing: border-box;
+    border-radius: inherit;
 }
 
 @media (hover: hover) {
@@ -237,14 +323,14 @@ nav .social-icon {
 }
 
 #aboutme {
-    background-color: var(--color-papaya);
+    background-color: var(--background-color);
     padding: 5em;
+    color: var(--color-dark-pink);
 }
 
 #aboutme h1 {
     font-size: 4em;
     margin-bottom: 1em;
-    color: var(--color-black-olive);
     line-height: 1.3em;
 }
 
@@ -265,6 +351,7 @@ nav .social-icon {
 #aboutme .profile-photo {
     width: 100%;
     height: 100%;
+    min-height: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 50em;
@@ -272,9 +359,11 @@ nav .social-icon {
 
 #aboutme i {
     position: absolute;
-    left: -13%;
+    left: -14%;
     bottom: 25%;
-    height: 10em;
+    font-size: 6em;
+    transform: rotate(-30deg);
+    color: var(--color-orange-yellow);
 }
 
 #aboutme i img {
@@ -282,7 +371,7 @@ nav .social-icon {
 }
 
 #contactme {
-    background-color: var(--color-peach);
+    background-color: var(--background-color);
     padding: 6em 5em;
     gap: 1.5em;
 }
@@ -291,7 +380,7 @@ nav .social-icon {
     flex: .6;
     font-size: 4em;
     line-height: 1.3em;
-    color: var(--color-blackberry);
+    color: var(--color-dark-green);
 }
 
 #contactme form {
@@ -299,10 +388,12 @@ nav .social-icon {
 }
 
 #contactme h2 {
-    color: var(--color-plum);
+    color: var(--color-dark-green);
     font-size: 1.5em;
     margin-bottom: 1em;
-    font-family: var(--font-body-text);
+    font-family: var(--content-font);
+    font-weight: 400;
+    text-align: center;
 }
 
 #contactme input,
@@ -310,9 +401,18 @@ nav .social-icon {
     width: 100%;
     font-size: 1.2em;
     padding: 1em;
-    background-color: var(--color-pineapple);
+    background-color: var(--background-color);
     color: var(--color-raspberry);
     transition: all .1s ease;
+    border: 3px var(--color-light-blue) solid;
+}
+
+#contactme input {
+    border-radius: 100px;
+}
+
+#contactme textarea {
+    border-radius: 30px;
 }
 
 #contactme input::placeholder,
@@ -324,8 +424,8 @@ nav .social-icon {
 
 #contactme input:focus,
 #contactme textarea:focus {
-    outline: .2em solid var(--color-raspberry);
-    background-color: var(--color-pineapple);
+    border: 4px var(--color-light-blue) solid;
+    background-color: rgba(var(--color-orange-yellow-rgb), .4);
     font-weight: 400;
 }
 
@@ -336,8 +436,8 @@ nav .social-icon {
 
 #contactme input.valid:not(:focus),
 #contactme textarea.valid:not(:focus) {
-    background-color: var(--color-green-grape);
-    font-weight: 400;
+    background-color: var(--background-color);
+    font-weight: 500;
 }
 
 #contactme .error-message {
@@ -357,11 +457,12 @@ nav .social-icon {
     font-weight: 400;
 }
 
-#contactme input.invalid+.error-message,
-#contactme textarea.invalid+.error-message {
+#contactme input.invalid + .error-message,
+#contactme textarea.invalid + .error-message {
     font-size: 1em;
     opacity: 1;
     visibility: visible;
+    padding-left: 2em;
 }
 
 @media (hover: hover) {
@@ -370,7 +471,7 @@ nav .social-icon {
     #contactme input.valid:hover:not(:focus),
     #contactme textarea:hover:not(:focus),
     #contactme textarea.valid:hover:not(:focus) {
-        background-color: var(--color-banana);
+        background-color: var(--color-orange-yellow);
         font-weight: bolder;
         color: var(--color-raspberry);
     }
@@ -379,12 +480,26 @@ nav .social-icon {
 footer {
     padding: 3em;
     color: var(--color-raspberry);
-    background-color: var(--color-black-olive);
+    background-color: var(--color-pink);
 }
 
 footer h3 {
-    font-size: 1.5em;
-    margin-bottom: 1.2em;
+    font-family: var(--content-font) !important;
+    color: var(--background-color);
+    font-size: 3.5em;
+}
+
+footer h3 span:nth-of-type(2) {
+    font-weight: 800;
+    letter-spacing: -.01em;
+    margin-top: -.3em;
+}
+
+footer h3 span:nth-of-type(3) {
+    text-transform: uppercase;
+    font-size: .4em;
+    letter-spacing: .5em;
+    font-weight: 200;
 }
 
 footer .right-column {
@@ -392,9 +507,8 @@ footer .right-column {
 }
 
 footer a {
-    background-color: var(--color-raspberry);
-    padding: .2em;
-    color: var(--color-black-olive);
+    color: var(--background-color);
+    fill: var(--background-color);
     border-radius: 100%;
     width: 1.2em;
     height: 1.2em;
@@ -404,9 +518,12 @@ footer a {
     transition: all 0.2s ease;
 }
 
+footer a svg {
+    height: 100%;
+}
+
 @media (hover: hover) {
     footer a:hover {
-        background-color: var(--color-green-grape);
         transform: scale(1.2);
     }
 }
@@ -414,16 +531,17 @@ footer a {
 #back-top {
     width: 4em;
     height: 4em;
-    right: 5%;
+    right: calc(50% - 2em);
     bottom: -4%;
-    background-color: var(--color-raspberry);
-    color: var(--color-pineapple);
+    background-color: var(--color-light-blue);
+    color: var(--background-color);
+    fill: var(--background-color);
     transform: translateY(-110vh);
     transition: all .5s ease;
 }
 
-#back-top i {
-    font-size: 2em;
+#back-top svg {
+    height: 65%;
 }
 
 #back-top.show {
@@ -457,21 +575,32 @@ footer a {
 
 .popup-container .popup {
     width: 35em;
-    background-color: var(--color-papaya);
+    background-color: var(--color-dark-green);
     padding: 1.5em;
+    border-radius: 15px;
 }
 
 .popup-container.fail .popup {
-    background-color: var(--color-blackberry);
+    background: var(--color-dark-pink);
+}
+
+.popup-container .button.close {
+    padding: 0;
 }
 
 .popup-container .button.close {
     width: 1em;
     height: 1em;
-    padding: 1em;
     background-color: transparent;
     color: var(--color-pineapple);
+    fill: var(--color-pineapple);
     font-size: 1.5em;
+}
+
+.popup-container .button.close:hover {
+    transform: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .popup-container p {
@@ -490,7 +619,7 @@ footer a {
 }
 
 .popup-container.fail p:nth-child(2) a {
-    color: var(--color-banana);
+    color: var(--color-orange-yellow);
     text-decoration: underline;
 }
 
@@ -503,19 +632,18 @@ footer a {
 }
 
 .popup-container.fail .button.confirm {
-    background-color: var(--color-banana);
+    background-color: var(--color-orange-yellow);
 }
 
 @media (hover: none) {
     #portfolio-hiperlink .project .details {
         opacity: 1;
         visibility: visible;
-        background: linear-gradient(to top, var(--color-black-olive) 10%, transparent 60%);
+        background: linear-gradient(to top, rgba(var(--color-dark-pink-rgb), .5) 10%, transparent 60%);
     }
 
     #back-top {
         bottom: 1%;
-        right: calc(50% - 2em);
     }
 }
 
@@ -533,14 +661,16 @@ footer a {
     animation: spin 2s linear infinite;
 }
 
-form .spinner {
-    visibility: hidden;
-    opacity: 0;
-    font-size: 0;
+form button#send {
+    gap: .5em;
 }
 
-form.loading .spinner {
-    visibility: visible;
-    opacity: 1;
-    font-size: 1em;
+form button#send .spinner {
+    display: none;
+    fill: var(--background-color);
+    height: 1em;
+}
+
+form.loading button#send .spinner {
+    display: block;
 }

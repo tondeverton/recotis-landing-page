@@ -4,16 +4,8 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 */
 
 @media only screen and (max-width: 1368px) and (orientation: landscape) {
-    header .column-left a {
-        font-size: 2.5em;
-    }
-
     nav .ancor {
         font-size: 1.5em;
-    }
-
-    header .column-right {
-        flex: 2;
     }
 
     nav .column-right {
@@ -68,10 +60,6 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         font-size: 1.5em;
     }
 
-    footer h3 {
-        font-size: 2em;
-    }
-
     footer p {
         font-size: 1.3em;
     }
@@ -81,9 +69,5 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         height: 1.3em;
         line-height: 1.3em;
         font-size: 1.8em;
-    }
-
-    .button {
-        font-size: 1.5em;
     }
 }

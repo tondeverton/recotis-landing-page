@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://recotis.com/</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.recotis.com/"/>
+    </url>
+
+    <!-- Portfolio Section -->
+    <url>
+        <loc>https://www.recotis.com/#portfolio-hiperlink</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- About Me Section -->
+    <url>
+        <loc>https://www.recotis.com/#aboutme</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contact Section -->
+    <url>
+        <loc>https://www.recotis.com/#contactme</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- External Portfolio Links -->
+    <url>
+        <loc>https://www.behance.net/gallery/211332443/Mystery-at-Whimsy-Manor</loc>
+        <lastmod>2024-06-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.behance.net/gallery/218503643/Luna-Character-Design</loc>
+        <lastmod>2024-06-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.behance.net/gallery/220750093/Exploring-the-Cliffs-Character-Design</loc>
+        <lastmod>2024-06-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Social Profiles -->
+    <url>
+        <loc>https://www.behance.net/recotis</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.linkedin.com/in/recotis</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.instagram.com/recotis_art</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://x.com/recotis_</loc>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>

@@ -40,5 +40,3 @@ async function setAssets() {
         localStorage.setItem(key, urls[key])
     }
 }
-
-setAssets()

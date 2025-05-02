@@ -4,30 +4,25 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 */
 
 @media only screen and (max-width: 1036px) and (orientation: portrait) {
-    nav .column-left {
-        flex: .8;
-    }
-
-    nav .column-left a {
-        font-size: 2em;
+    #desktop-pfp-container h1 {
+        display: none;
     }
 
     nav .column-right {
-        flex: 2;
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     nav .social-icon {
         font-size: 1.4em;
     }
 
-    .button {
-        font-size: 1.7em;
+    #home video {
+        width: 80%;
     }
 
     #portfolio-hiperlink {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         padding: 4em;
     }
 
@@ -38,6 +33,10 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 
     #portfolio-highlight .project {
         height: calc(100% / 4 - 1.5em);
+    }
+
+    #portfolio-hiperlink .project {
+        grid-column: span 1;
     }
 
     #portfolio-highlight #first-project-highlight {
@@ -108,6 +107,10 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         flex-direction: column;
     }
 
+    #contact-me-form {
+        width: 70%;
+    }
+
     #contactme h1 {
         display: flex;
         align-items: center;
@@ -116,10 +119,6 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
     #contactme input,
     #contactme textarea {
         font-size: 1.5em;
-    }
-
-    footer h3 {
-        font-size: 1.8em;
     }
 
     footer p {
