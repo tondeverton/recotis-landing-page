@@ -532,7 +532,7 @@ footer a svg {
     width: 4em;
     height: 4em;
     right: calc(50% - 2em);
-    bottom: -4%;
+    bottom: 1%;
     background-color: var(--color-light-blue);
     color: var(--background-color);
     fill: var(--background-color);
@@ -553,7 +553,6 @@ footer a svg {
 
     #back-top:hover,
     #back-top:focus {
-        bottom: 1%;
         opacity: 1;
         box-shadow: 0 0 1em rgba(var(--colorrgb-black-olive), .7);
     }
@@ -640,10 +639,6 @@ footer a svg {
         opacity: 1;
         visibility: visible;
         background: linear-gradient(to top, rgba(var(--color-dark-pink-rgb), .5) 10%, transparent 60%);
-    }
-
-    #back-top {
-        bottom: 1%;
     }
 }
 
