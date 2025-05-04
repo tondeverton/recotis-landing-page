@@ -4,10 +4,10 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 */
 
 :root {
-    --font-hagrid: "Cutive", serif;
-    --font-body-text: "Montserrat", sans-serif;
+    --highlight-font: "Chewy", serif;
+    --content-font: "Montserrat", sans-serif;
 
-    --color-black-olive: #271935;
+    --color-pink: #ff9abd;
     --colorrgb-black-olive: 27, 19, 35;
     --color-plum: #411B3A;
     --color-black-grape: #16173B;
@@ -16,16 +16,23 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
     --color-papaya: #F68C6F;
     --color-peach: #F6BD72;
     --color-banana: #F4D877;
-    --color-green-grape: #d3eaaa;
+    --background-color: #fffbef;
+    --background-color-rgb: 255, 251, 239;
     --color-pineapple: #F7ECC9;
+    --color-dark-green: #33591b;
+    --color-light-blue: #33cad6;
+    --color-dark-pink: #ab1967;
+    --color-dark-pink-rgb: 171, 25, 103;
+    --color-orange-yellow: #f6bd72;
+    --color-orange-yellow-rgb: 246, 189, 114;
 }
 
 :focus-visible {
-    outline: 2px dashed var(--color-raspberry);
+    outline: 2px solit var(--color-light-blue);
 }
 
-.color-black-olive {
-    color: var(--color-black-olive);
+.color-pink {
+    color: var(--color-pink);
 }
 .color-plum {
     color: var(--color-plum);
@@ -49,21 +56,33 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
     color: var(--color-banana);
 }
 .color-green-grape {
-    color: var(--color-green-grape);
+    color: var(--background-color);
 }
 .color-pineapple {
     color: var(--color-pineapple);
 }
+.color-dark-green {
+    color: var(--color-dark-green);
+}
+.color-light-blue {
+    color: var(--color-light-blue);
+}
+.color-dark-pink {
+    color: var(--color-dark-pink);
+}
+.color-orange-yellow {
+    color: var(--color-orange-yellow);
+}
 
 html body {
-    font-family: var(--font-body-text);
+    font-family: var(--content-font);
     color: var(--color-plum);
 }
 
 html body h1,
 html body h2,
 html body h3 {
-    font-family: var(--font-hagrid);
+    font-family: var(--highlight-font);
 }
 
 img {
@@ -80,6 +99,11 @@ img {
 
 .flex-1 {
     flex: 1;
+}
+
+.flex-1-fixed {
+    flex: 1;
+    min-width: 0;
 }
 
 .flex-2 {
@@ -104,6 +128,18 @@ img {
 
 .order-3 {
     order: 3;
+}
+
+.gap-1 {
+    gap: 1em;
+}
+
+.gap-2 {
+    gap: 2em;
+}
+
+.gap-3 {
+    gap: 3em;
 }
 
 .ai-start {
@@ -138,12 +174,20 @@ img {
     justify-content: space-between;
 }
 
+.jc-sa {
+    justify-content: space-around;
+}
+
 .ji-center {
     justify-items: center;
 }
 
 .fd-column {
     flex-direction: column;
+}
+
+.fd-row {
+    flex-direction: row;
 }
 
 .grid {
@@ -174,6 +218,10 @@ img {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-2-columns {
+    grid-column: span 2;
+}
+
 .border-box {
     box-sizing: border-box;
 }
@@ -196,11 +244,11 @@ textarea {
 }
 
 .h-100vh {
-    height: 100vh;
+    height: 100dvh;
 }
 
 .w-100vw {
-    width: 100vw;
+    width: 100dvw;
 }
 
 .uppercase {

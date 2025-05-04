@@ -5,16 +5,19 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 
 #everton-signature {
     padding: 1.5em;
-    text-align: center;
-    background-color: var(--color-plum);
+    background-color: var(--color-dark-green);
+    text-align: end;
 }
 
 #everton-signature h1 {
-    color: var(--color-raspberry);
-    font-family: var(--font-body-text);
+    color: var(--color-orange-yellow);
+    font-family: var(--content-font);
 }
 
 #everton-signature a {
-    color: var(--color-papaya);
-    text-transform: uppercase;
+    font-family: var(--highlight-font);
+    letter-spacing: .15em;
+    color: inherit;
+    font-size: 1.25em;
+    border-bottom: 2px solid;
 }

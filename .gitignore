@@ -1,3 +1,7 @@
+# Security content
+js/security.js
+.secrets
+
 # Node modules directory (if using npm)
 node_modules/
 

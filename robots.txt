@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.inc$
+
+# Block AI data scrapers
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: GPTBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.recotis.com/sitemap.xml

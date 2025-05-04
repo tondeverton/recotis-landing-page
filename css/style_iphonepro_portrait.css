@@ -27,22 +27,30 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
     }
 
     nav .ancor[href="#menu"] {
-        display: block;
-        flex: 0;
         font-size: 2em;
         display: flex;
         align-items: center;
+        justify-content: end;
+        height: 1.8em;
     }
 
     nav .column-left {
         justify-content: start;
     }
 
-    nav .column-right {
+    #mobile-pfp-container {
+        display: flex;
+    }
+
+    #desktop-pfp-container {
+        display: none;
+    }
+
+    nav #menu {
         position: fixed;
-        height: 100vh;
-        width: 100vw;
-        background-color: var(--color-black-olive);
+        height: 100dvh;
+        width: 100dvw;
+        background-color: var(--color-pink);
         top: 0;
         left: 0;
         padding: 2em;
@@ -53,6 +61,26 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         justify-content: space-evenly;
         transform: translateX(100vw);
         transition: all .2s ease;
+        flex-direction: column;
+    }
+
+    nav #menu .ancor {
+        flex: 0;
+    }
+
+    nav #menu .column-left {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3em;
+        font-size: .8em;
+    }
+
+    nav #menu .column-right {
+        flex: 0;
+        font-size: .8em;
+        justify-content: space-between;
+        gap: 0;
     }
 
     nav #menu:target,
@@ -64,7 +92,7 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         width: 100%;
     }
 
-    nav .ancor[href="#home"] {
+    nav .ancor-back {
         display: block;
         font-size: 1.6em;
     }
@@ -73,7 +101,38 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         width: 1.3em;
         height: 1.3em;
         line-height: 1.3em;
-        font-size: 1.4em;
+        font-size: 1.6em;
+    }
+
+    #home {
+        background-color: rgba(var(--background-color-rgb), .5);
+        padding: 0;
+    }
+
+    #home .content-container {
+        gap: 1.5em;
+    }
+
+    #home .content-container h1 {
+        font-size: 4.5em;
+    }
+
+    #home .content-container p {
+        font-weight: 500;
+    }
+
+    #home .video-container {
+        display: block;
+        position: absolute;
+        height: 100dvh;
+        width: 100dvw;
+        z-index: -1;
+    }
+
+    #home .video-container video {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
     }
 
     #portfolio-hiperlink {
@@ -83,8 +142,29 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         padding: 2em;
     }
 
+    #portfolio-hiperlink .project:nth-of-type(1) {
+        border-radius: 15px 15px 0 0;
+    }
+
+    #portfolio-hiperlink .project:nth-of-type(2) {
+        border-radius: 0;
+    }
+
+    #portfolio-hiperlink .project:nth-last-of-type(2) {
+        border-radius: 0;
+    }
+
+    #portfolio-hiperlink .project:nth-last-of-type(1) {
+        border-radius: 0 0 15px 15px;
+    }
+
     #portfolio-hiperlink .project {
         height: 20em;
+    }
+
+    #portfolio-hiperlink .project .details {
+        opacity: 0;
+        visibility: hidden;
     }
 
     #contactme {
@@ -94,9 +174,14 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         padding: 2em;
     }
 
+    #contact-me-form {
+        width: 100%;
+    }
+
     #contactme h1 {
         font-size: 2.5em;
-        align-self: start;
+        align-self: center;
+        padding: 1.5em;
     }
 
     #contactme h2 {
@@ -105,7 +190,7 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 
     #contactme input,
     #contactme textarea {
-        font-size: 1em;
+        font-size: .75em;
     }
 
     #contactme .button {
@@ -114,6 +199,7 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 
     #back-top {
         transform: translateY(-150vh);
+        right: calc(100% - 4.5em);
     }
 
     .popup-container .popup {
@@ -163,7 +249,7 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
     }
 
     footer .right-column {
-        justify-content: space-evenly;
+        justify-content: space-between;
         gap: 0;
     }
 
