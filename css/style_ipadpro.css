@@ -26,6 +26,11 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
         width: 85%;
     }
 
+    #portfolio-hiperlink .project .details {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     .button {
         font-size: 1.3em;
         padding: 1em 1.5em;
