@@ -262,20 +262,27 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
                     class="color-dark-pink">color</span></p>
         </div>
         <div class="video-container flex-1 flex fd-column jc-center ai-center">
-            <video
-                    class="zi-0"
-                    poster="https://www.recotis.com/images/drawing_thumbnail.webp"
-                    playsinline
-                    webkit-playsinline
-                    x-webkit-airplay="allow"
-                    preload="auto"
-                    autoplay
-                    muted
-                    loop
-                    tabindex="0"
+            <video id="home-video"
+                   class="zi-0"
+                   poster="https://www.recotis.com/images/drawing_thumbnail.webp"
+                   preload="metadata"
+                   loading="lazy"
+                   playsinline
+                   muted
+                   autoplay
+                   loop
+                   tabindex="0"
             >
-                <source src="https://recotis.com/videos/drawing.webm" type="video/webm">
+                <source src="https://recotis.com/videos/drawing2160p60.mp4" type="video/mp4">
             </video>
+            <script>
+              const video = document.getElementById('home-video');
+              video.addEventListener('canplay', () => {
+                document.body.addEventListener('click', () => {
+                  video.play().catch(e => console.log(e));
+                }, {once: true});
+              }, {once: true});
+            </script>
         </div>
     </section>
 </div>
