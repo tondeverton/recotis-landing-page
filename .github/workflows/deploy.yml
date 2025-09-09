@@ -52,6 +52,10 @@ jobs:
         run: |
           gsutil cp ./index.html gs://www.recotis.com
           gsutil acl ch -u AllUsers:R gs://www.recotis.com/index.html
+          gsutil cp ./robots.txt gs://www.recotis.com
+          gsutil acl ch -u AllUsers:R gs://www.recotis.com/robots.txt
+          gsutil cp ./sitemap.xml gs://www.recotis.com
+          gsutil acl ch -u AllUsers:R gs://www.recotis.com/sitemap.xml
           gsutil cp ./script.min.js gs://www.recotis.com
           gsutil acl ch -u AllUsers:R gs://www.recotis.com/script.min.js
           gsutil cp ./styles.min.css gs://www.recotis.com
