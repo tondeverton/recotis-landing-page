@@ -35,12 +35,12 @@ jobs:
 
       - name: Inject environment variables
         run: |
-          echo "window.__env = {" >> ./js/environment_variables.js
-          echo "  bffHost: '${{ secrets.SIGNED_URLS_PROVIDER_HOST }}'," >> ./js/environment_variables.js
-          echo "}" >> ./js/environment_variables.js
+          echo "window.__env = {" >> ./public/scripts/environment_variables.js
+          echo "  bffHost: '${{ secrets.SIGNED_URLS_PROVIDER_HOST }}'," >> ./public/scripts/environment_variables.js
+          echo "}" >> ./public/scripts/environment_variables.js
 
       - name: Inject security js
-        run: echo '${{ secrets.SECURITY_JS }}' > ./js/security.js
+        run: echo '${{ secrets.SECURITY_JS }}' > ./public/scripts/security.js
 
       - name: Build
         run: npm run build
@@ -49,18 +49,4 @@ jobs:
         run: npm run unit:test
 
       - name: Deploy to Google Cloud Storage
-        run: |
-          gsutil cp ./index.html gs://www.recotis.com
-          gsutil acl ch -u AllUsers:R gs://www.recotis.com/index.html
-          gsutil cp ./robots.txt gs://www.recotis.com
-          gsutil acl ch -u AllUsers:R gs://www.recotis.com/robots.txt
-          gsutil cp ./sitemap.xml gs://www.recotis.com
-          gsutil acl ch -u AllUsers:R gs://www.recotis.com/sitemap.xml
-          gsutil cp ./script.min.js gs://www.recotis.com
-          gsutil acl ch -u AllUsers:R gs://www.recotis.com/script.min.js
-          gsutil cp ./styles.min.css gs://www.recotis.com
-          gsutil acl ch -u AllUsers:R gs://www.recotis.com/styles.min.css
-          gsutil cp ./images/claps.png gs://www.recotis.com/images/
-          gsutil acl ch -u AllUsers:R gs://www.recotis.com/images/claps.png
-          gsutil cp ./images/coming_soon.svg gs://www.recotis.com/images/
-          gsutil acl ch -u AllUsers:R gs://www.recotis.com/images/coming_soon.svg
+        run: gsutil -m rsync -r dist gs://www.recotis.com
