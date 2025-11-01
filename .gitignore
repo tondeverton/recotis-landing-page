@@ -26,10 +26,6 @@ jspm_packages/
 # SvelteKit build output
 .svelte-kit/
 
-# Gatsby files
-.cache/
-public/
-
 # Various IDE and editor files
 .vscode/
 .idea/
