@@ -1,9 +1,14 @@
-<!--
-This file is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.
-You may obtain a copy of the license at https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt
--->
-
-<!DOCTYPE html>
+---
+import '../styles/reset.css'
+import '../styles/style.css'
+import '../styles/commons.css'
+import '../styles/common-components.css'
+import '../styles/style_ipadpro_portrait.css'
+import '../styles/style_ipadpro_landscape.css'
+import '../styles/style_ipadpro.css'
+import '../styles/style_iphonepro_portrait.css'
+import '../styles/everton_signature.css'
+---
 <html lang="en">
 
 <head>
@@ -22,51 +27,6 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 
     <title>Renata Cotis - Illustrator</title>
 
-    <!-- Styles-->
-    <style>
-        html.loading body {
-            visibility: hidden;
-        }
-    </style>
-
-    <script>
-      document.documentElement.classList.add('loading');
-
-      function errorWhileImportCssMin(event) {
-        event.preventDefault()
-
-        const cssFiles = [
-          './css/reset.css',
-          './css/commons.css',
-          './css/common-components.css',
-          './css/style.css',
-          './css/everton_signature.css',
-          './css/style_ipadpro.css',
-          './css/style_ipadpro_landscape.css',
-          './css/style_ipadpro_portrait.css',
-          './css/style_iphonepro_portrait.css',
-        ]
-
-        cssFiles.forEach((file) => {
-          const link = document.createElement('link')
-          link.rel = 'stylesheet'
-          link.href = file
-          document.head.appendChild(link)
-        })
-      }
-    </script>
-
-    <link
-            rel="preload"
-            href="styles.min.css"
-            as="style"
-            onload="this.rel='stylesheet';document.documentElement.classList.remove('loading')"
-            onerror="errorWhileImportCssMin(event)"
-    >
-    <noscript>
-        <link rel="stylesheet" href="styles.min.css">
-    </noscript>
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,31 +36,7 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Cutive&display=swap">
 
     <!-- Scripts JS -->
-    <script>
-      function errorWhileImportJsMin(event) {
-        event.preventDefault()
-
-        const jsFiles = [
-          './js/environment_variables.js',
-          './js/utilities.js',
-          './js/security.js',
-          './js/configurations.js',
-          './js/back_top_listener.js',
-          './js/bff_resource.js',
-          './js/form_validation.js',
-          './js/images_getter.js',
-          './js/startup.js'
-        ]
-
-        jsFiles.forEach((file) => {
-          const script = document.createElement('script')
-          script.src = file
-          document.head.appendChild(script)
-        })
-      }
-    </script>
-
-    <script src="script.min.js" onerror="errorWhileImportJsMin(event)" defer></script>
+    <script is:inline src="/scripts/script.min.js" defer></script>
 
     <!-- Meta data -->
     <script type="application/ld+json">
@@ -545,3 +481,7 @@ You may obtain a copy of the license at https://creativecommons.org/licenses/by-
 </body>
 
 </html>
+
+<style>
+  
+</style>

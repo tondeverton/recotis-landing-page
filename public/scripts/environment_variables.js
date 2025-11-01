@@ -21,7 +21,7 @@ function getBffHost() {
 
 /** @returns {number} */
 function getMinimumContactNameLength() {
-    return window.__env?.minimumContactNameLength ?? 2
+    return window.__env?.minimumContactNameLength ?? 3
 }
 
 /** @returns {number} */
