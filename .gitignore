@@ -52,6 +52,7 @@ dist/
 build/
 cypress/videos/
 cypress/screenshots/
+.astro
 
 # Temporary files
 tmp/
