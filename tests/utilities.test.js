@@ -3,7 +3,7 @@ This file is licensed under the Creative Commons Attribution-NonCommercial 4.0 I
 You may obtain a copy of the license at https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt
 */
 
-require('../js/utilities')
+require('../public/scripts/utilities')
 
 describe('Check success execution when promise time out is lower than limit time out', () => {
     const properties = [

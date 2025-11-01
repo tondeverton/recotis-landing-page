@@ -3,7 +3,7 @@ This file is licensed under the Creative Commons Attribution-NonCommercial 4.0 I
 You may obtain a copy of the license at https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt
 */
 
-require('./../js/form_validation')
+require('../public/scripts/form_validation')
 
 describe('Check function validateInput', () => {
     let mockHtmlInputElement;
